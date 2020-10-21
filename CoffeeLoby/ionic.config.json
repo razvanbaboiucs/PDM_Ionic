@@ -1,0 +1,7 @@
+{
+  "name": "CoffeeLoby",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
