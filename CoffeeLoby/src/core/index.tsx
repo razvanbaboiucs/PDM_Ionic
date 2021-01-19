@@ -7,7 +7,7 @@ const log = getLogger('api');
 
 export const PHOTO_STORAGE = 'photos';
 
-export const mapsApiKey = 'AIzaSyAbzdZOX_cMbH5JwCsZBC-L1qPortqmIwU';
+export const mapsApiKey = 'key';
 
 export interface ResponseProps<T> {
     data: T;
