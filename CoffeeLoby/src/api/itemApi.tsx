@@ -18,11 +18,11 @@ export const getPageItems: (token:string, pageNumber : number) => Promise<Coffee
     return withLogs(axios.get(itemUrl+"/page/"+pageNumber.toString(), authConfig(token)), 'getItems');
 }
 
-export const createItem: (token: string, item: CoffeeItemProps) => Promise<CoffeeItemProps[]> = (token, item) => {
+export const createItem: (token: string, item: CoffeeItemProps) => Promise<CoffeeItemProps> = (token, item) => {
     return withLogs(axios.post(itemUrl, item, authConfig(token)), 'createItem');
 }
 
-export const updateItem: (token: string, item: CoffeeItemProps) => Promise<CoffeeItemProps[]> = (token, item) => {
+export const updateItem: (token: string, item: CoffeeItemProps) => Promise<CoffeeItemProps> = (token, item) => {
     return withLogs(axios.put(`${itemUrl}/${item._id}`, item, authConfig(token)), 'updateItem');
 }
 

@@ -235,3 +235,9 @@ http://ionicframework.com/docs/theming/ */
   .date-column { display:none !important;}
   .mark-column {display:none !important;}
 }
+
+ion-card, ion-card-header, ion-card-content {
+  text-align: center;
+  padding: 10px;
+  flex-wrap: wrap;
+}

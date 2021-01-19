@@ -1,3 +1,5 @@
+import {GeolocationPosition} from "@capacitor/core";
+
 export interface CoffeeItemProps {
     _id?: string;
     description: string;
@@ -5,4 +7,12 @@ export interface CoffeeItemProps {
     title: string;
     recommended?: boolean;
     mark?: number;
+    acquiredAt?: number;
+    photo?: Photo;
+    position?: GeolocationPosition;
+}
+
+export interface Photo {
+    filepath: string;
+    webviewPath?: string;
 }

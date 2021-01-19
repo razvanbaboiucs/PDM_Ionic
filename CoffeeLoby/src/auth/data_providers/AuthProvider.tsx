@@ -44,7 +44,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       setState({
         ...state,
         token: localToken,
-        isAuthenticated: true
+        isAuthenticated: true,
+        pendingAuthentication: false
       });
     }
   }, []);
@@ -81,7 +82,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   function authenticationEffect() {
     let canceled = false;
-    authenticate();
+    if (!localStorage.getItem("token") || !isAuthenticated)
+      authenticate();
     return () => {
       canceled = true;
     }
